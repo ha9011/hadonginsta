@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\ha\\.conda\\envs\\django_insta\\python.exe",
+    "python.formatting.provider": "black"
+}
