@@ -11,11 +11,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+# 추가
 from os.path import abspath, dirname
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
-
+BASE_DIR = dirname(dirname(dirname(abspath(__file__))))  ## __file__ 현재 파일 위치
+##C:\Users\ha\Desktop\django\django_insta\hadonginsta\settings\common.py
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -118,10 +119,12 @@ USE_TZ = True
 
 STATIC_URL = "/static/"  ## js css html 부를 경로
 
+## 특정한 앱이 아닌 그 외에 두고자 할땐
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,  "hadonginsta", 'static')
+]
 
-STATICFILES_DIRS = []
-
-STATIC_ROOT = os.path.join(BASE_DIR, "hadonginsta", "static")  # 위치
+STATIC_ROOT = os.path.join(BASE_DIR,  'static')  # 위치
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

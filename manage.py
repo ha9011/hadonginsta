@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hadonginsta.settings.dev")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hadonginsta.settings.dev")  # 장고 setting의 경로를 보여줌  // 1인자값이 없다면 2인자값으로 하겠다
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
