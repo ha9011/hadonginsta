@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # third Apps
+    "bootstrap4",
     "debug_toolbar",
     # locals Apps
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -85,6 +87,8 @@ DATABASES = {
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
+#AUTH_USER_MODEL = '{app-name}.{User-model-name}' # "auth.User" 기본값
+AUTH_USER_MODEL = "accounts.User"    # "auth.User" 기본값
 
 
 # Password validation
@@ -135,3 +139,13 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+
+
+# sendGrid
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_PASSWORD = "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"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
