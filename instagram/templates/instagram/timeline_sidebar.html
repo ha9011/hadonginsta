@@ -1,0 +1,36 @@
+<div class="d-flex p-2 mb-3">
+    <div class="mr-2">
+        <img class="roundec-circle" src="{{ user.avatar_url }}" style="width: 48px; height : 48px;"/>   
+    </div>
+    <div>
+        {{ user.username }}</br>
+        <small class="text-muted">{{ user.name }}</small>
+    </div>
+</div>
+
+
+<div class="card mb-3">
+    
+    <div class="card-header text-muted">
+        stories
+    </div>
+    
+    <div class="card-body text-muted">
+        stories from people you follow will show up here
+    </div>
+</div>
+
+<div class="card mb-3">
+    
+    <div class="card-header text-muted">
+        suggestions for you
+    </div>
+    
+    <div class="card-body text-muted">
+        {% for suggested_user in suggested_user_list %}
+            {% include "instagram/timeline_sidebar_user_follow.html" with suggested_user=suggested_user %}
+        {% empty %}
+            추천 친구가 없습니다.
+        {% endfor %}
+    </div>
+</div>

@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_REDIRECT_URL = "../../"
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     # third Apps
     "bootstrap4",
     "debug_toolbar",
+    "django_pydenticon",
+    'easy_thumbnails',
     # locals Apps
     "accounts",
+    "instagram",
 ]
 
 MIDDLEWARE = [
@@ -68,7 +71,7 @@ TEMPLATES = [
             "context_processors": [
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
+                "django.contrib.auth.context_processors.auth",   # 장고 user 꺼낼 수 있는 이유
                 "django.contrib.messages.context_processors.messages",
             ],
         },
@@ -149,3 +152,16 @@ EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
 EMAIL_HOST_PASSWORD = "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"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+ADMINS = [
+    ("Ha DongWon", 'ha90111@naver.com')
+]
+
+WELCOME_EMAIL_SENDER = 'ha90111@naver.com'
+
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (50, 50), 'crop': True},
+    },
+}

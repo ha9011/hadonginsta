@@ -1,0 +1,5 @@
+# templated
+http://pythonstudy.xyz/python/article/312-Django-%ED%85%9C%ED%94%8C%EB%A6%BF-%ED%99%95%EC%9E%A5
+http://blog.naver.com/PostView.nhn?blogId=nackji80&logNo=221396512736&categoryNo=37&parentCategoryNo=2&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+https://nachwon.github.io/django-8-template/
+https://ssungkang.tistory.com/entry/Django-%EB%A7%8E%EC%9D%B4%EB%93%A4-%ED%95%98%EB%8A%94-%EC%8B%A4%EC%88%98-html-%ED%8C%8C%EC%9D%BC%EC%9D%98-%EC%9C%84%EC%B9%98
